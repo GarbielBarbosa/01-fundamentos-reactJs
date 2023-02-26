@@ -42,7 +42,6 @@ const posts = [
     ],
     publishedAt: new Date("2022-05-03 20:00:00"),
   },
-
 ];
 
 function App() {
@@ -55,6 +54,7 @@ function App() {
           {posts.map((post) => {
             return (
               <Post
+                key={post.id}
                 author={post.author}
                 content={post.content}
                 publishedAt={post.publishedAt}
